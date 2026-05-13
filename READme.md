@@ -307,9 +307,23 @@ http://127.0.0.1:5000
 
 # g. Team Members & Roles
 
-| Name | Role | Responsibilities |
+# g. Team Members & Roles
+
+| Team Member | Role | Responsibilities |
 |---|---|---|
-| CHP | Full Stack Developer | Backend, frontend, database integration, UI design |
+| Catangui, Lai Pauline T. | Database & SQL Developer | Designed the database structure, created SQL tables, managed relationships, and handled database queries |
+| Hernandez, Antoinette E. | Frontend Developer & Documentation | Designed the user interface using HTML, CSS, Bootstrap, and prepared the project documentation |
+| Pacer, Thea Ann S. | Flask Backend Developer | Developed the Flask backend, handled routing, session management, CRUD functionalities, and database integration |
+
+---
+
+## Project Credits
+
+The project name **CHP** is derived from the combination of the team members' surnames:
+
+- **C** — Catangui
+- **H** — Hernandez
+- **P** — Pacer
 
 ---
 

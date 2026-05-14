@@ -384,7 +384,7 @@ admin
 ### Password
 
 ```text
-1234
+****
 ```
 
 ---

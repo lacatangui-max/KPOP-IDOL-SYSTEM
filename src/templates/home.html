@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KPOP Idol System</title>
+
+    <link rel="icon" href="/static/kpop.jpg">
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <style>
+
+        body {
+            background: linear-gradient(
+                135deg,
+                #ff9a9e,
+                #fad0c4,
+                #fbc2eb,
+                #a18cd1
+            );
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        /* NAVBAR */
+
+        .navbar {
+            background: rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(10px);
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 28px;
+            color: white !important;
+            letter-spacing: 1px;
+        }
+
+        /* HERO */
+
+        .hero-section {
+            text-align: center;
+            color: rgb(20, 17, 17);
+            padding: 80px 20px 40px;
+        }
+
+        .hero-section h1 {
+            font-size: 60px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .hero-section p {
+            font-size: 22px;
+            opacity: 0.95;
+        }
+
+        /* CARDS */
+
+        .card {
+            border: none;
+            border-radius: 25px;
+            transition: 0.4s;
+            box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-12px) scale(1.03);
+        }
+
+        .card i {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .card-title {
+            font-weight: bold;
+            font-size: 28px;
+        }
+
+        .card p {
+            font-size: 17px;
+        }
+
+        /* CUSTOM CARD COLORS */
+
+        .groups-card {
+            background: linear-gradient(to right, #36d1dc, #5b86e5);
+            color: white;
+        }
+
+        .idols-card {
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            color: white;
+        }
+
+        .albums-card {
+            background: linear-gradient(to right, #43cea2, #185a9d);
+            color: white;
+        }
+
+        .songs-card {
+            background: linear-gradient(to right, #f7971e, #ffd200);
+            color: white;
+        }
+
+        .add-card {
+            background: linear-gradient(to right, #c471f5, #fa71cd);
+            color: white;
+        }
+
+        /* BUTTONS */
+
+        .btn-light {
+            border-radius: 12px;
+            font-weight: bold;
+        }
+
+        .btn-dark {
+            border-radius: 12px;
+            font-weight: bold;
+        }
+
+        .btn-danger {
+            border-radius: 12px;
+            font-weight: bold;
+            background-color: #ff4b5c;
+            border: none;
+        }
+
+        .btn-danger:hover {
+            background-color: #e63e4d;
+        }
+
+        /* FOOTER */
+
+        .footer {
+            margin-top: 70px;
+            text-align: center;
+            color: rgb(34, 29, 29);
+            padding: 20px;
+        }
+
+        .footer h5 {
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+
+        <div class="container">
+
+            <a class="navbar-brand" href="/">
+
+                <i class="bi bi-music-note-beamed"></i>
+                KPOP Idol System
+
+            </a>
+
+            <a href="/logout" class="btn btn-danger">
+                Logout
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- HERO SECTION -->
+    <div class="hero-section">
+
+        <h1>WELCOME TO KPOP IDOL SYSTEM</h1>
+
+        <p>
+            Manage KPOP Groups, Idols, Albums, and Songs
+        </p>
+
+    </div>
+
+
+    <!-- DASHBOARD -->
+    <div class="container">
+
+        <div class="row g-4">
+
+            <!-- GROUPS -->
+            <div class="col-md-4">
+
+                <div class="card groups-card text-center p-4">
+
+                    <i class="bi bi-people-fill"></i>
+
+                    <h3 class="card-title">Groups</h3>
+
+                    <p>View all KPOP groups.</p>
+
+                    <a href="/groups" class="btn btn-light">
+                        View Groups
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- IDOLS -->
+            <div class="col-md-4">
+
+                <div class="card idols-card text-center p-4">
+
+                    <i class="bi bi-person-badge-fill"></i>
+
+                    <h3 class="card-title">Idols</h3>
+
+                    <p>Manage idol information.</p>
+
+                    <a href="/idols" class="btn btn-light">
+                        View Idols
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- ALBUMS -->
+            <div class="col-md-4">
+
+                <div class="card albums-card text-center p-4">
+
+                    <i class="bi bi-disc-fill"></i>
+
+                    <h3 class="card-title">Albums</h3>
+
+                    <p>Browse KPOP albums.</p>
+
+                    <a href="/albums" class="btn btn-light">
+                        View Albums
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- SONGS -->
+            <div class="col-md-6">
+
+                <div class="card songs-card text-center p-4">
+
+                    <i class="bi bi-music-note-list"></i>
+
+                    <h3 class="card-title">Songs</h3>
+
+                    <p>Explore KPOP songs database.</p>
+
+                    <a href="/songs" class="btn btn-light">
+                        View Songs
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- ADD IDOL -->
+            <div class="col-md-6">
+
+                <div class="card add-card text-center p-4">
+
+                    <i class="bi bi-plus-circle-fill"></i>
+
+                    <h3 class="card-title">Add Idol</h3>
+
+                    <p>Add a new idol to the database.</p>
+
+                    <a href="/add_idol" class="btn btn-dark">
+                        Add Idol
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <div class="footer">
+
+        <h5>CCCS105 Final Project</h5>
+
+        <p>Developed by CHP</p>
+
+    </div>
+
+</body>
+
+</html>

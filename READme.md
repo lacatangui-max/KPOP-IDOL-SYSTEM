@@ -1,4 +1,4 @@
-# KPOP Idol SCRUD System
+# KPOP Idol System
 
 A Flask and MySQL-based web application for managing K-pop groups, idols, albums, and songs.
 

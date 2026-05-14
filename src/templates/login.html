@@ -42,6 +42,16 @@
 
     <h1>🎵 KPOP LOGIN</h1>
 
+    {% if message %}
+
+        <div class="alert alert-danger text-center">
+
+            {{ message }}
+
+        </div>
+
+    {% endif %}
+
     <form method="POST">
 
         <div class="mb-3">

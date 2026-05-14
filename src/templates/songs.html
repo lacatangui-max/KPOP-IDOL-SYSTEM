@@ -130,6 +130,45 @@
 
 </head>
 
+<script>
+
+function searchTable() {
+
+    let input = document.getElementById("searchInput");
+    let filter = input.value.toLowerCase();
+
+    let table = document.getElementById("myTable");
+    let tr = table.getElementsByTagName("tr");
+
+    for (let i = 1; i < tr.length; i++) {
+
+        let found = false;
+
+        let td = tr[i].getElementsByTagName("td");
+
+        for (let j = 0; j < td.length; j++) {
+
+            if (td[j]) {
+
+                let textValue = td[j].textContent || td[j].innerText;
+
+                td[j].style.backgroundColor = "";
+
+                if (textValue.toLowerCase().indexOf(filter) > -1) {
+
+                    found = true;
+
+                    td[j].style.backgroundColor = "#fff3cd";
+                }
+            }
+        }
+
+        tr[i].style.display = found ? "" : "none";
+    }
+}
+
+</script>
+
 <body>
 
 <div class="container">
@@ -152,12 +191,12 @@
         </div>
 
         <!-- SEARCH BAR -->
-        <input
-            type="text"
-            id="searchInput"
-            class="form-control mb-3"
-            placeholder="Search songs..."
-            onkeyup="searchTable()">
+            <input
+                type="text"
+                id="searchInput"
+                onkeyup="searchTable()"
+                class="form-control"
+                placeholder="Search here...">
 
         <!-- TABLE -->
         <table class="table table-bordered table-striped table-hover">

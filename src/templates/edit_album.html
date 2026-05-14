@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Edit Album</title>
+
+    <link rel="icon" href="/static/kpop.jpg">
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <style>
+
+        body {
+            background: linear-gradient(to right, #a18cd1, #fbc2eb);
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        .form-container {
+            margin-top: 60px;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0px 5px 20px rgba(0,0,0,0.15);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: bold;
+            color: #6a0572;
+        }
+
+        .btn-primary {
+            background-color: #d65db1;
+            border: none;
+            font-weight: bold;
+        }
+
+        .btn-primary:hover {
+            background-color: #b84b97;
+        }
+
+        .btn-secondary {
+            background-color: #845ec2;
+            border: none;
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="form-container">
+
+        <h1>EDIT ALBUM</h1>
+
+        <form method="POST">
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Album Name
+                </label>
+
+                <input
+                    type="text"
+                    name="album_name"
+                    class="form-control"
+                    value="{{ album[1] }}"
+                    required>
+
+            </div>
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Release Date
+                </label>
+
+                <input
+                    type="date"
+                    name="release_date"
+                    class="form-control"
+                    value="{{ album[2] }}"
+                    required>
+
+            </div>
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Album Type
+                </label>
+
+                <input
+                    type="text"
+                    name="album_type"
+                    class="form-control"
+                    value="{{ album[3] }}"
+                    required>
+
+            </div>
+
+            <button
+                type="submit"
+                class="btn btn-primary">
+
+                Update Album
+
+            </button>
+
+            <a
+                href="/albums"
+                class="btn btn-secondary">
+
+                Back
+
+            </a>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>
